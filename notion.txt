@@ -1,0 +1,30 @@
+/**
+ * MÉTODOS
+ * GET    => Buscar informação
+ * POST   => Inserir (criar) informação
+ * PUT    => Alterar informações
+ * DELETE => Remover(excluir) informações
+ * PATCH  => Alterar uma info específica
+ */
+
+/**
+ * Tipos de parâmetro
+ * Routes Params => http://localhost:3000/produtos/89898
+ * Query Params  => http://localhost:3000/produtos?name=teclado&qualidade=otimo&preco=baratin
+ * 
+ * Body Params => {
+ *  "name": "teclado",
+ *  "description": "toptoptop"
+ * }
+ */
+
+app.get("/test", (Request, Response) => {
+    // Request => tudo que está entrando
+    // Response => tudo que está retornando
+    return Response.send("Olá pessoal!");
+})
+
+app.post("/test-post", (Request, Response) => {
+    return Response.send("Teste método POST");
+
+})
