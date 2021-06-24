@@ -9,7 +9,7 @@ import { hash } from "bcryptjs";
  }
 
  class CreateUserService {
-    async execute( { name, email, admin, password} : IUserRequest ){
+    async execute( { name, email, admin = false, password} : IUserRequest ){
         const userRepository = getCustomRepository(UsersRepositories);
 
         if (!email) {
